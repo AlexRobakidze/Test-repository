@@ -1,0 +1,23 @@
+val = input()
+root = [val, None, None, 0]
+print(root)
+
+def defBr(parent):
+    val = input()
+    branch = [val, None, None, parent[3]+1]
+    if ((parent[0]>branch[0]) and (parent[1]==None)):
+        parent[1]=branch
+        print (parent)
+        return defBr(branch)
+    if ((parent[0]>branch[0]) and (parent[1]!=None)):
+        print(parent)
+        return defBr(parent[1])
+    if ((parent[0]<branch[0]) and (parent[2]==None)):
+        parent[2]=branch
+        print (parent)
+        return defBr(branch)
+    if ((parent[0]<branch[0]) and (parent[2]!=None)):
+        print(parent)
+        return defBr(parent[2])
+defBr(root)
+print (root)
