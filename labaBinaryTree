@@ -1,0 +1,10 @@
+val = input()
+root = [val, None, None, 0]
+def DefCont():
+    data = input()
+    branch = [data, None, None, 0]
+    return branch
+def Compare(parent,son):
+    parent
+
+
